@@ -32,7 +32,7 @@ async getRandom() {
 		    const productRamdom = data[Math.floor(Math.random() * data.length)]
 		    return productRamdom
         }else{
-            return (console.log(`No existe ningun objeto`))
+            return (console.log('No hay productos.'))
         }
 	}catch(err){
         return (console.log(`Hay un error: ${err}`))
@@ -53,7 +53,7 @@ const randomProduct = async (req, res) => {
 }
 
 app.get('/products', allProducts)
-app.get('/random', randomProduct )
+app.get('/random', randomProduct)
 
 app.listen (port, () => {
     console.log(`Servidor escuchando en el puerto ${port}`)
