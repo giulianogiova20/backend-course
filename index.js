@@ -1,7 +1,7 @@
-import express from 'express';
+const express = require('express')
 const app = express()
 const port = 8080
-import fs from 'fs'
+const fs = require("fs")
 
 
 class Container {
