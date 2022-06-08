@@ -2,7 +2,7 @@
   "name": "clase_4",
   "version": "1.0.0",
   "description": "clase 4 test",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "start" : "node ./index.js"
   },
