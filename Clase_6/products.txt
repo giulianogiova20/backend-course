@@ -1,0 +1,1 @@
+[{"title":"The Mandalorian Figure","price":14,"thumbnail":"https://m.media-amazon.com/images/I/71ylTgu1ysL._AC_SX569_.jpg","id":"1"},{"title":"Palpatine Figure","price":15,"thumbnail":"https://m.media-amazon.com/images/I/61XAmUM3l0L._AC_SX569_.jpg","id":"2"},{"title":"Vader Figure","price":17,"thumbnail":"https://m.media-amazon.com/images/I/91XyD3SUP+L._AC_SX569_.jpg","id":"3"}]
