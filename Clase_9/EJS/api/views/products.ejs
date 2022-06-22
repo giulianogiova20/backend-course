@@ -1,0 +1,22 @@
+<% if(products.length) { %> 
+    <ul>
+    <% products.map(product => { %> 
+        <li>
+            Product ID: <%= product.id %> <br>
+            Title: <%= product.title %> <br>
+            Price: <%= product.price %> <br>
+            Imagen:  <img style="max-width: 100px" src="<%=product.thumbnail%>"></img>
+        </li>
+        <br/>
+    <% }) %> 
+    </ul>
+    <a type="button" href="/">Go to form</a>
+
+<% } else { %> 
+    <h1>NO PRODUCTS - Add a new product in Form</h1>
+    <br>
+    <a type="button" href="/">Go to form</a>
+<% } %>
+
+
+ 

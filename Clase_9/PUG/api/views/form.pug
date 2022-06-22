@@ -1,0 +1,19 @@
+extends ./layouts/main.pug
+
+block content 
+    form(action='/products' method='post')
+      input(type='text' placeholder='Title' name='title')
+      input(type='number' placeholder='Price' name='price')
+      input(type='text' placeholder='IMG' name='thumbnail')
+      input(type='submit' value='Enviar')
+    br
+    p  Example:
+    p
+      | Title: Vader Figure 
+      br
+      | Price: 17 
+      br
+      | Thumbnail: https://m.media-amazon.com/images/I/91XyD3SUP+L._AC_SX569_.jpg
+    a(type='button' href='/products') Go to products
+
+

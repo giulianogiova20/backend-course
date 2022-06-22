@@ -1,0 +1,16 @@
+extends ./layouts/main.pug
+
+block content
+  if products.length 
+    each product in products
+      ul
+      li
+        li= product.id
+        li= product.title
+        li= product.price
+        li
+          img(width="80px")&attributes({src: product.thumbnail})
+  else
+    h1 No products
+
+  a(type='button' href='/') Go to form

@@ -1,0 +1,23 @@
+{{#if products.length}}
+    <ul>
+        {{#each products}}
+            <li>
+                Product ID: {{this.id}} <br>
+                Nombre: {{this.title}} <br>
+                Precio: {{this.price}}<br>
+                Imagen: <img style="max-width: 80px;" src="{{this.thumbnail}}" alt="">
+
+            </li>
+        {{/each}}
+    </ul>
+    {{else}}  
+    <h1>NO PRODUCTS - Add a new product in Form</h1>
+    <br>
+{{/if}}
+
+<br>
+<a type="button" href="/">Go to form</a>   
+
+
+
+ 
