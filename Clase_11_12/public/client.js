@@ -10,22 +10,29 @@ const userEmailInput = document.querySelector('#userEmailInput')
 const messageInput = document.querySelector('#messageInput')
 const messagesPool = document.querySelector('#messagesPool')
 
+
 const sendMessage = () => {
     try {
         const userEmail = userEmailInput.value
         const message = messageInput.value
-
-        socket.emit('client:message', { userEmail, message })
+        const date = new Date().toLocaleString("es-AR")
+        socket.emit('client:message', { userEmail, message, date })
     } catch (error) {
         console.log(`Han error has ocurred; ${error}`)
     }
 }
 
-const renderMessages = (messages) => {
+const renderMessages = (messages, date) => {
     try {
         const html = messages.map(messageInfo => {
-            return(`<div>
-                <p class="userEmail fw-bold">${messageInfo.userEmail} <span class="userMessage text-success">${messageInfo.message}</span></p> 
+            return(`
+                <div class="col-8">
+                    <p><span class="userEmail fw-bold">${messageInfo.userEmail} :</span>
+                        <span class="userMessage text-success">${messageInfo.message}</span>
+                    </p>
+                </div>
+                <div class="col-4">
+                    <p>${messageInfo.date}</p>
                 </div>`)
         }).join(" ");
 
