@@ -1,0 +1,11 @@
+{{#each messages}}
+  <div class="col-8">
+    <p><span><img style="width: 20px; height: 20px" src="{{author.avatar}}" alt=""></span>
+        <span class="userEmail fw-bold">{{author.email}} :</span>
+        <span class="userMessage text-success">{{text}}</span>
+    </p>
+  </div>
+  <div class="col-4">
+      <p>[{{time}}] </p>
+  </div>
+{{/each}}
