@@ -1,0 +1,1 @@
+[{"name":"Vader Figure","price":"12","photoURL":"https://m.media-amazon.com/images/I/81GwfVSY+LL._AC_SX466_.jpg","stock":"2","description":"muñeco","code":"12","id":1,"timestamp":"3/7/2022 19:41:02"}]

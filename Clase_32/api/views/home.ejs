@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Clase 26</title>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-start mt-3 ">
+            <h1 class="mb-3">Welcome, <span class="text-success"><%= user.email %></span></h1>
+            <form action='/logout' method='POST' class="mt-2 mx-3">
+                <button type="submit" class="btn btn-danger">Logout</button>
+            </form>
+        </div>
+
+        <!-- FORM PRODUCTS -->
+            <h2 class="my-3 bg-danger">ADD PRODUCTS</h2>
+            <form id="addProduct">
+                <input id="productTitle" name="title" type="text" placeholder="Title" class="form-control w-50 my-2">
+                <input id="productPrice" name="price" type="number" placeholder="Price" class="form-control w-50 my-2">
+                <input id="productThumbnail" name="thumbnail" type="text" placeholder="Thumbnail" class="form-control w-50 my-2">
+                <button type="submit" class="btn btn-danger">Add Product</button>
+            </form>
+            <div class="my-3">
+                <p> Title: Vader Figure <br>
+                    Price: 17 <br>
+                    Thumbnail: https://m.media-amazon.com/images/I/91XyD3SUP+L._AC_SX569_.jpg</p>
+            </div>
+            <!-- PRODUCTS -->
+            <div class="my-3">
+                <h3 class="my-3 text-danger">Products List:</h3>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Title</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Thumbnail</th>
+                          </tr>
+                        </thead>
+                        <tbody class="table-group-divider" id="products">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        <!-- FORM MESSAGE -->
+
+        <h2 class="mt-5 bg-success">CHAT</h2>
+        <form id="formMessage" class="my-3">
+            <input id="userEmail" name="email" type="email" placeholder="john.doe@gmail.com" class="form-control w-50 my-2">
+            <input id="userName" name="name" type="text" placeholder="John" class="form-control w-50 my-2">
+            <input id="userLastname" name="lastname" type="text" placeholder="Doe" class="form-control w-50 my-2">
+            <input id="userAge" name="age" type="text" placeholder="18" class="form-control w-50 my-2">
+            <input id="userAlias" name="alias" type="text" placeholder="JohnDoe" class="form-control w-50 my-2">
+            <input id="userAvatar" name="avatar" type="text" placeholder="URL" class="form-control w-50 my-2">
+            <input id="messageInput" name="message" type="text" placeholder="Type..." class="form-control w-50 my-2">
+            <button type="submit" class="btn btn-success">Send</button>
+        </form>
+        <!-- CHAT -->
+        <div class="my-3">
+            <h3 class="my-3 text-success">MESSAGES</h3>
+            <div id="messagesPool" class="my-3 row">
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./client.js"></script>
+</body>
+</html>
